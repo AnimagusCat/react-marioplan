@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 //the Provider binds the store to the App
 import thunk from 'redux-thunk';
 
-//applyMiddleWare(thunk) is a store enhancer
+//applyMiddleWare(thunk) is a store enhancer, can return a function inside the actionCreators which can interact with the database
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
